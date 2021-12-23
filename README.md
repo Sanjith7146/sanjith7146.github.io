@@ -5,5 +5,5 @@ Source Code for my personal website
 
 The file .htaccess was used to remove the ".html" at the back of website URLs.
 
-# [hisanjith.com]
+# [hisanjith.com]hisanjith.com
 
