@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Quicksand"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Sanjith</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/CleanShot_2021-12-09_at_21.47.52_2x-removebg-preview.png?v=1639627415359"
+    />
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script language="JavaScript">
+      window.onload = function() {
+        document.addEventListener(
+          "contextmenu",
+          function(e) {
+            e.preventDefault();
+          },
+          false
+        );
+        document.addEventListener(
+          "keydown",
+          function(e) {
+            //document.onkeydown = function(e) {
+            // "I" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+              disabledEvent(e);
+            }
+            // "J" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+              disabledEvent(e);
+            }
+            // "S" key + macOS
+            if (
+              e.keyCode == 83 &&
+              (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)
+            ) {
+              disabledEvent(e);
+            }
+            // "U" key
+            if (e.ctrlKey && e.keyCode == 85) {
+              disabledEvent(e);
+            }
+            // "F12" key
+            if (event.keyCode == 123) {
+              disabledEvent(e);
+            }
+          },
+          false
+        );
+        function disabledEvent(e) {
+          if (e.stopPropagation) {
+            e.stopPropagation();
+          } else if (window.event) {
+            window.event.cancelBubble = true;
+          }
+          e.preventDefault();
+          return false;
+        }
+      };
+      //edit: removed ";" from last "}" because of javascript error
+    </script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+  </head>
+  <body>
+    <nav
+      class="w3-bar w3-black w3-card w3-top topnav"
+      id="myTopnav"
+      style="position:fixed; top:0; display:flex; align-items:center; overflow:hidden;"
+    >
+      <a href="/">
+        <img
+          src="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/CleanShot_2021-12-09_at_21.47.52_2x-removebg-preview.png?v=1639627415359"
+          class="w3-bar-item w3-button w3-hover-black w3-hover-text-grey first"
+        />
+      </a>
+      <a
+        href="/"
+        class="w3-mobile active w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
+        >Home</a
+      >
+      <a
+        href="projects"
+        class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
+        >Projects</a
+      >
+<!--      <a
+        href="portfolio"
+        class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
+        >Portfolio</a
+      >
+-->
+      <a
+        href="about"
+        class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
+        >About Me</a
+      >
+       <a href="javascript:void(0);" class="w3-right icon" style="margin-right: 16px;">
+        <div class="container" onclick="myFunction(this);">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </a>
+    </nav>
+    <br />
+
+    <div
+      class="w3-content w3-margin-top"
+      style="max-width:1400px;padding-top: 30px;"
+    >
+      
+      <div class="w3-row-padding" style="padding-top:30px">
+        <div>
+          <img src="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/Sanjith%20logo.jpg?v=1639970727650" alt="SANJITH" width="100%" style="align-content: center;">
+        </div>
+        <br>
+      
+      <div style="">
+      <div
+        class="w3-container w3-card w3-white w3-margin-bottom w3-round w3-mobile"
+      >
+        <div class="w3-display-container">
+          <div class="w3-display-bottomleft w3-container w3-text-dark-grey">
+            <h2></h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p class="w3-xxlarge"><b>Hello there! I am Sanjith</b></p>
+          <p class="w3-large">
+            <b
+              ><i
+                class="fa fa-desktop fa-fw w3-margin-right w3-large w3-text-dark-grey"
+              ></i
+              >A Student, Photographer, Designer, Coder</b
+            >
+          </p>
+          <p>
+            <i
+              class="fa fa-home fa-fw w3-margin-right w3-large w3-text-dark-grey"
+            ></i
+            ><b>Singapore</b>, Singapore
+          </p>
+          <a href="mailto:sanjithsethu@gmail.com" target="_blank" rel="noopener noreferrer"
+            ><i
+              class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-dark-grey"
+            ></i
+            >contactme@sanjith.com</a
+          >
+          <hr />
+
+          <section id="programming languages">
+            <p class="w3-large">
+              <b
+                ><i
+                  class="fa fa-code fa-fw w3-margin-right w3-text-dark-grey"
+                ></i
+                >Programming Langauges</b
+              >
+            </p>
+            <p>Swift</p>
+            <div class="w3-light-dark-grey w3-round-xlarge w3-small">
+              <div
+                class="w3-container w3-center w3-round-xlarge w3-dark-grey"
+                style="text-align: center;line-height:24px;height:24px;width:90%"
+              ></div>
+              <br>
+            </div>
+            <p>Python</p>
+            <div class="w3-light-dark-grey w3-round-xlarge w3-small">
+              <div
+                class="w3-container w3-center w3-round-xlarge w3-dark-grey"
+                style="text-align: center;line-height:24px;height:24px;width:80%"
+              >
+                <div class="w3-center w3-text-white"></div>
+                
+              </div>
+              <br>
+            </div>
+            <p>CSS, HTML and JavaScript</p>
+            <div class="w3-light-dark-grey w3-round-xlarge w3-small">
+              <div
+                class="w3-container w3-center w3-round-xlarge w3-dark-grey"
+                style="text-align: center;line-height:24px;height:24px;width:40%"
+              ></div>
+              <br>
+            </div>
+            <p>Java</p>
+            <div class="w3-light-dark-grey w3-round-xlarge w3-small">
+              <div
+                class="w3-container w3-center w3-round-xlarge w3-dark-grey"
+                style="text-align: center;line-height:24px;height:24px;width:20%"
+              ></div>
+            </div>
+            <br>
+            <br>
+          </section>
+
+          <section id="languages">
+            <p class="w3-large w3-text-theme">
+              <b
+                ><i
+                  class="fa fa-globe fa-fw w3-margin-right w3-text-dark-grey"
+                ></i
+                >Languages</b
+              >
+            </p>
+            <p>English (Singapore)</p>
+            <div class="w3-light-dark-grey w3-round-xlarge">
+              <div
+                class="w3-round-xlarge w3-dark-grey"
+                style="height:24px;width:99%"
+              ></div>
+              <br>
+            </div>
+            <p>Tamil</p>
+            <div class="w3-light-dark-grey w3-round-xlarge">
+              <div
+                class="w3-round-xlarge w3-dark-grey"
+                style="height:24px;width:90%"
+              ></div>
+              <br>
+            </div>
+          </section>
+          <br />
+        </div>
+      </div>
+      </div>
+
+      <div
+        class="w3-container w3-card w3-white w3-margin-bottom w3-round w3-mobile"
+      >
+        <h2 class="w3-text-dark-grey w3-padding-16">
+          <i
+            class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-dark-grey"
+          ></i
+          >Work Experience
+        </h2>
+
+        <div class="w3-container">
+          <h5 class="w3-opacity">
+            <b>Chief Executive Officer, Lateiva Team</b>
+          </h5>
+          <h6 class="w3-text-dark-grey">
+            <i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2021 -
+            <span class="w3-tag w3-dark-grey w3-round">Present</span>
+          </h6>
+          <p>Swift Accelerator Programme - App Development Project</p>
+          <img
+            src="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/image.png?v=1639627417719"
+            alt="Lateiva"
+            width="80"
+            height=""
+            style="padding-right:8px;padding-left:10px;"
+          />
+          <a href="https://tk.sg/sis22-lateiva" target="_blank" rel="noopener noreferrer">
+            <span>Download our app now!</span></a
+          >
+          <hr />
+        </div>
+
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Chief Design Officer, Lateiva Team </b></h5>
+          <h6 class="w3-text-dark-grey">
+            <i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2021 -
+            <span class="w3-tag w3-dark-grey w3-round">Present</span>
+          </h6>
+          <p>Swift Accelerator Programme 2021 - App Development Project</p>
+          <hr />
+          <h4></h4>
+        </div>
+
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Chief Design Officer, Atom Inc.</b></h5>
+          <h6 class="w3-text-dark-grey">
+            <i class="fa fa-calendar fa-fw w3-margin-right"></i>Apr 2020 -
+            <span class="w3-tag w3-dark-grey w3-round">Present</span>
+          </h6>
+          <p>SST Incorporated - App Development Project</p>
+          <hr />
+        </div>
+
+        <div class="w3-container">
+          <h5 class="w3-opacity">
+            <b>Chief Technology Officer(iOS), Savior Inc.</b>
+          </h5>
+          <h6 class="w3-text-dark-grey">
+            <i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2020 - Oct
+            2020
+          </h6>
+          <p>Changemakers Programme</p>
+          <br />
+        </div>
+      </div>
+
+      <div
+        class="w3-container w3-card w3-white w3-margin-bottom w3-round w3-mobile"
+      >
+        <h2 class="w3-text-dark-grey w3-padding-16">
+          <i
+            class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-dark-grey"
+          ></i
+          >Education
+        </h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity">
+            <b>School of Science and Technology, Singapore [SST]</b>
+          </h5>
+          <h6 class="w3-text-dark-grey">
+            <i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 -
+            <span class="w3-tag w3-dark-grey w3-round">Present</span>
+          </h6>
+          <p>
+            Singapore-Cambridge General Certificate of Education Ordinary Level
+            (GCE O-Level)
+          </p>
+          <p1
+            >Course:
+            <strong
+              >Biotechnology, Geogrpahy elective, Social Studies, Chemistry,
+              Physics, Additional Mathematics, Elementry Mathematics, Higher
+              Tamil, English</strong
+            >.</p1
+          >
+          <hr />
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Lakeside Primary School(LSPS)</b></h5>
+          <h6 class="w3-text-dark-grey">
+            <i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2018
+          </h6>
+          <p>
+            Primary School Leaving Examination (PSLE):
+            <strong>246</strong> (Aggregate)
+          </p>
+          <br>
+        </div>
+      </div>
+    </div>
+        </body>
+
+  <footer class="w3-white w3-padding-16">
+    <div class="wrapper">
+      <a href="https://www.instagram.com/mr_sun101/" target="_blank" rel="noopener noreferrer">
+        <div id="insta" class="button">
+          <div class="icon">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <span>Instagram</span>
+        </div>
+      </a>
+      <a href="https://github.com/Sanjith7146" target="_blank" rel="noopener noreferrer">
+        <div id="gh" class="button">
+          <div class="icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <span>Github</span>
+        </div>
+      </a>
+      <a href="mailto:sanjithsethu@gmail.com" target="_blank" rel="noopener noreferrer">
+        <div class="button" id="gmail">
+          <div class="icon">
+            <i class="far fa-envelope"></i>
+          </div>
+          <span>Email</span>
+        </div>
+      </a>
+    </div>
+    <p class="attr">
+      <b>©2021 by Sanjith. All Rights Reserved. Powered by: <img class="exabytesLogo" src="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/Exabytes.png?v=1640073806021" alt="Exabytes" height="48"/></b>
+    </p>
+  </footer>
+</html>
