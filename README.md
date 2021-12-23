@@ -6,5 +6,5 @@ Source Code for my personal website
 The file .htaccess was used to remove the ".html" at the back of website URLs.
 
 # Website
-<a href="hisanjit.com"  target="_blank" rel="noopener noreferrer">hisanjith.com</a>
+<a href="hisanjith.com"  target="_blank" rel="noopener noreferrer">hisanjith.com</a>
 
