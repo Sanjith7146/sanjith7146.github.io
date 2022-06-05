@@ -1,19 +1,55 @@
 ::selection {
-    background: lightgray;
-  }
+  background: lightgray;
+}
 ::-moz-selection {
-    background: lightgray;
+  background: lightgray;
 }
 
 #date {
-    margin: 15px;
-    font-size: 12px;
-    /*font-style: italic;*/
-    font-weight: bold;
+  margin: 15px;
+  font-size: 12px;
+  /*font-style: italic;*/
+  font-weight: bold;
 }
 
-html,body,h1,h2,h3,h4,h5,h6,footer {
-    font-family: "Quicksand", sans-serif
+.example {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+.videoWrapper iframe {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-style: none;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+footer {
+  font-family: "Quicksand", sans-serif;
 }
 
 #signature {
@@ -22,10 +58,10 @@ html,body,h1,h2,h3,h4,h5,h6,footer {
   animation: sign 4s ease;
   animation-fill-mode: forwards;
   -webkit-animation: sign 4s ease-in-out forwards;
-	   -moz-animation: sign 4s ease-in-out forwards;
-	    -ms-animation: sign 4s ease-in-out forwards;
-	     -o-animation: sign 4s ease-in-out forwards;
-	        animation: sign 4s ease-in-out forwards;
+  -moz-animation: sign 4s ease-in-out forwards;
+  -ms-animation: sign 4s ease-in-out forwards;
+  -o-animation: sign 4s ease-in-out forwards;
+  animation: sign 4s ease-in-out forwards;
 }
 
 @keyframes sign {
@@ -66,7 +102,7 @@ footer {
   float: left;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
-  -webkit-user-select: none; /* Safari */        
+  -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
@@ -81,24 +117,72 @@ footer {
   width: 200px;
 }
 
-#insta{
-  margin-left:120px;
+#lateivarow {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#insta, #gh {
-  margin-right: 25px;
+#footerwrapper {
+  margin-left: auto;
+  margin-right: auto;
 }
-#insta:hover .icon{ background: #E1306C; }
-#gh:hover .icon{ background: #333; }
-#gmail:hover .icon { background: black;}
+#whatsapp {
+  margin-left: 15px;
+}
 
-#insta .icon { color: #E1306C; }
-#gh .icon { color: #333; }
-#gmail .icon { color: black;}
+#insta,
+#gh {
+  margin-right: 15px;
+}
 
-#insta span { color: #E1306C; }
-#gh span { color: #333; }
-#gmail span { color: black }
+#insta:hover .icon {
+  background: #e1306c;
+}
+#gh:hover .icon {
+  background: #333333;
+}
+#gmail:hover .icon {
+  background: black;
+}
+#whatsapp:hover .icon {
+  background: #25d366;
+}
+
+#insta .icon {
+  color: #e1306c;
+}
+#gh .icon {
+  color: #333333;
+}
+#gmail .icon {
+  color: black;
+}
+#whatsapp .icon {
+  color: #25d366;
+}
+
+#insta span {
+  color: #e1306c;
+}
+#gh span {
+  color: #333333;
+}
+#gmail span {
+  color: black;
+}
+#whatsapp span {
+  color: #25d366;
+}
+
+#footerwrapper2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#videoWrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .button .icon {
   display: inline-block;
@@ -113,22 +197,24 @@ footer {
   transition: all 0.2s ease-in-out;
 }
 .button:hover i {
-  color: #fff;
+  color: #ffffff;
 }
 
 .topnav {
   background-color: black;
   width: 100%;
+  z-index:100;
 }
 
 .topnav .icon {
   margin: 16px 16px;
-  color:white;
+  color: white;
   float: right;
   display: block;
   text-align: center;
   text-decoration: none;
   display: none;
+  
 }
 
 .first {
@@ -139,18 +225,22 @@ footer {
 
 .topnav a.active {
   color: gray;
-  pointer-events: none; 
+  pointer-events: none;
   cursor: default;
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
   .topnav a.icon {
     display: block;
   }
 }
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     float: right;
@@ -164,66 +254,184 @@ footer {
 }
 
 .container {
-    display: inline-block;
-    cursor: pointer;
-    margin: 10px;
-  }
-  
-  .bar1, .bar2, .bar3 {
-    width: 40px;
-    height: 5px;
-    border-radius: 3px;
-    background-color: white;
-    margin: 7px 0;
-    transition: 0.4s;
-  }
-  
-  .change .bar1 {
-    -webkit-transform: translateY(12px) rotate(135deg);
-    transform: translateY(12px) rotate(135deg);
-  }
-  
-  .change .bar2 {opacity: 0;}
-  
-  .change .bar3 {
-    -webkit-transform: translateY(-12px) rotate(-135deg);
-    transform: translateY(-12px) rotate(-135deg);
-  }
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px;
+}
 
-.jumbotron{
+.bar1,
+.bar2,
+.bar3 {
+  width: 40px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: white;
+  margin: 7px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: translateY(12px) rotate(135deg);
+  transform: translateY(12px) rotate(135deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: translateY(-12px) rotate(-135deg);
+  transform: translateY(-12px) rotate(-135deg);
+}
+
+.jumbotron {
   background-color: rgba(249, 249, 249, 1);
 }
 
-#wrapper{
+#wrapper {
   display: grid;
-  align-content:center;
+  align-content: center;
   place-content: center;
   text-align: center;
 }
-
-#aboutme p{
-  font-size:20px;
+#wrapper2 {
+  display: grid;
+  align-content: center;
+  place-content: center;
+  text-align: center;
+  color: #000000;
 }
 
-#aboutme h1{
-  font-size:100px;
-  font-family:Nimbus Sans,sans-serif;
-  font-weight:400px;
+#aboutme p {
+  font-size: 20px;
+  color: white;
+  cursor: default
 }
-#aboutme a{
-  color: black;
+
+#aboutme h1 {
+  font-size: 100px;
+  font-family: Nimbus Sans, sans-serif;
+  font-weight: 400px;
+  color: white;
+  cursor: default
 }
-#instaabt, #ghabt {
+#aboutme a {
+  font-weight: 200px;
+  color: #c0c4c4;
+  text-decoration: underline;
+}
+#abtimage {
+  cursor: default
+}
+
+#certs a {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 1000;
+}
+
+#homepage {
+  color: #ffffff;
+  background: #000000;
+  font-family: "Light", M, -apple-system, \.SFNSText-Regular, San Francisco,
+    Roboto, Segoe UI, Helvetica Neue, Lucida Grande, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+#instaabt,
+#ghabt {
   margin-right: 15px;
 }
-#instaabt:hover .icon{ background: #E1306C; }
-#ghabt:hover .icon{ background: #333; }
-#gmailabt:hover .icon { background: black;}
+#whatsappabt {
+  margin-left: 15px;
+}
 
-#instaabt .icon { color: #E1306C; }
-#ghabt .icon { color: #333; }
-#gmailabt .icon { color: black;}
+#instaabt:hover .icon {
+  background: #e1306c;
+}
+#ghabt:hover .icon {
+  background: #333333;
+}
+#gmailabt:hover .icon {
+  background: black;
+}
+#whatsappabt:hover .icon {
+  background: #25d366;
+}
 
-#instaabt span { color: #E1306C; }
-#ghabt span { color: #333; }
-#gmailabt span { color: black }
+#instaabt .icon {
+  color: #e1306c;
+}
+#ghabt .icon {
+  color: #333333;
+}
+#gmailabt .icon {
+  color: black;
+}
+#whatsappabt .icon {
+  color: #25d366;
+}
+
+#instaabt span {
+  color: #e1306c;
+}
+#ghabt span {
+  color: #333333;
+}
+#gmailabt span {
+  color: black;
+}
+#whatsappabt span {
+  color: #25d366;
+}
+.carousel-caption {
+    position: relative;
+    left: 0;
+    top:0;
+}
+
+
+.carousel-inner > .item > img {
+  position: absolute;
+  top:0;
+  left: 0;
+  min-width: 100%;
+  width: 100%;
+}
+
+div {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.w3-container{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+h1,h2,h3,h4,h5,h6, p {
+  -webkit-touch-callout: text; /* iOS Safari */
+    -webkit-user-select: text; /* Safari */
+     -khtml-user-select: text; /* Konqueror HTML */
+       -moz-user-select: text; /* Old versions of Firefox */
+        -ms-user-select: text; /* Internet Explorer/Edge */
+            user-select: text; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+  display:block;
+}
