@@ -127,51 +127,57 @@ footer {
   margin-right: auto;
 }
 #whatsapp {
-  margin-left: 15px;
+  margin-left: 15px;!important
+	margin-top: 15px;!important
+}
+
+#gmail{
+	margin-top: 15px;!important
 }
 
 #insta,
 #gh {
-  margin-right: 15px;
+  margin-right: 15px;!important
+	
 }
 
 #insta:hover .icon {
-  background: #e1306c;
+  background: #e1306c;!important
 }
 #gh:hover .icon {
-  background: #333333;
+  background: #333333;!important
 }
 #gmail:hover .icon {
-  background: black;
+  background: black;!important
 }
 #whatsapp:hover .icon {
-  background: #25d366;
+  background: #25d366;!important
 }
 
 #insta .icon {
-  color: #e1306c;
+  color: #e1306c;!important
 }
 #gh .icon {
-  color: #333333;
+  color: #333333;!important
 }
 #gmail .icon {
-  color: black;
+  color: black;!important
 }
 #whatsapp .icon {
-  color: #25d366;
+  color: #25d366;!important
 }
 
 #insta span {
-  color: #e1306c;
+  color: #e1306c;!important
 }
 #gh span {
-  color: #333333;
+  color: #333333;!important
 }
 #gmail span {
-  color: black;
+  color: black;!important
 }
 #whatsapp span {
-  color: #25d366;
+  color: #25d366;!important
 }
 
 #footerwrapper2 {
@@ -341,49 +347,53 @@ footer {
 
 #instaabt,
 #ghabt {
-  margin-right: 15px;
+  margin-right: 15px;!important
 }
 #whatsappabt {
-  margin-left: 15px;
+  margin-left: 15px;!important
+	margin-top: 15px;!important
+}
+#gmailabt {
+	margin-top: 15px;!important
 }
 
 #instaabt:hover .icon {
-  background: #e1306c;
+  background: #e1306c;!important
 }
 #ghabt:hover .icon {
-  background: #333333;
+  background: #333333;!important
 }
 #gmailabt:hover .icon {
-  background: black;
+  background: black;!important
 }
 #whatsappabt:hover .icon {
-  background: #25d366;
+  background: #25d366;!important
 }
 
 #instaabt .icon {
-  color: #e1306c;
+  color: #e1306c;!important
 }
 #ghabt .icon {
-  color: #333333;
+  color: #333333;!important
 }
 #gmailabt .icon {
-  color: black;
+  color: black;!important
 }
 #whatsappabt .icon {
-  color: #25d366;
+  color: #25d366;!important
 }
 
 #instaabt span {
-  color: #e1306c;
+  color: #e1306c;!important
 }
 #ghabt span {
-  color: #333333;
+  color: #333333;!important
 }
 #gmailabt span {
-  color: black;
+  color: black;!important
 }
 #whatsappabt span {
-  color: #25d366;
+  color: #25d366;!important
 }
 .carousel-caption {
     position: relative;
@@ -435,3 +445,4 @@ h1,h2,h3,h4,h5,h6, p {
 .carousel-item-next, .carousel-item-prev, .carousel-item.active {
   display:block;
 }
+

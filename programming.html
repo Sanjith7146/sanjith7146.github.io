@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="google-site-verification"
+      content="Cf__WT19N1aIlN2kVkUan9kuQSniuHA7CBGdggHxKS0"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Quicksand"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <title>Programming</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/CleanShot_2021-12-09_at_21.47.52_2x-removebg-preview.png?v=1639627415359"
+    />
+    <script src="index.js"></script>
+    <script language="JavaScript">
+      window.onload = function () {
+        document.addEventListener(
+          "contextmenu",
+          function (e) {
+            e.preventDefault();
+          },
+          false
+        );
+        document.addEventListener(
+          "keydown",
+          function (e) {
+            //document.onkeydown = function(e) {
+            // "I" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+              disabledEvent(e);
+            }
+            // "J" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+              disabledEvent(e);
+            }
+            // "S" key + macOS
+            if (
+              e.keyCode == 83 &&
+              (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)
+            ) {
+              disabledEvent(e);
+            }
+            // "U" key
+            if (e.ctrlKey && e.keyCode == 85) {
+              disabledEvent(e);
+            }
+            // "F12" key
+            if (event.keyCode == 123) {
+              disabledEvent(e);
+            }
+          },
+          false
+        );
+        function disabledEvent(e) {
+          if (e.stopPropagation) {
+            e.stopPropagation();
+          } else if (window.event) {
+            window.event.cancelBubble = true;
+          }
+          e.preventDefault();
+          return false;
+        }
+      };
+      //edit: removed ";" from last "}" because of javascript error
+    </script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+  </head>
+
+  <body class="example">
+    <nav
+      class="w3-bar w3-black w3-card w3-top topnav"
+      id="myTopnav"
+      style="
+        position: fixed;
+        top: 0;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      "
+    >
+      <a href="/">
+        <img
+          src="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/CleanShot_2021-12-09_at_21.47.52_2x-removebg-preview.png?v=1639627415359"
+          class="w3-bar-item w3-button w3-hover-black w3-hover-text-grey first"
+        />
+      </a>
+      <a
+        href="/"
+        class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
+        >About</a
+      >
+      
+      <a
+        href="experience"
+        class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
+        >Experience</a
+      >
+      <a
+        href="biotech"
+        class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
+        >Biotechnology</a
+      >
+      <a
+        href="programming"
+        class="w3-mobile active w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
+        >Programming</a
+      >
+      <a
+        href="lateiva"
+        class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
+        >Lateiva</a
+      >
+      <a
+        href="tamiliva"
+        class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
+        >Tamiliva</a
+      >
+
+      <a href="javascript:void(0);" class="icon" style="margin-right: 16px">
+        <div class="container" onclick="myFunction(this);">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </a>
+    </nav>
+    <br />
+
+    <div
+      class="w3-content w3-margin-top"
+      style="max-width: 1400px; padding-top: 30px"
+    >
+      <div style="padding-top: 15px"></div>
+
+      <div
+        class="w3-container w3-card w3-white w3-margin-bottom w3-round w3-mobile"
+      >
+        <div
+          class="w3-content w3-margin-top"
+          style="max-width: 1400px; padding-bottom: 30px; padding-top: 10px"
+        >
+          <section id="Swift" style="padding-left: 50px; padding-right: 50px">
+            <h2 style="text-center">Projects made using Swift</h2>
+            <p style="text-center">
+              Swift is a programming language to create iOS applications.
+              Take a look below to see a few others I have done! To explore more projects
+              done by me, check out my Github at the bottom of the page!
+            </p>
+            <div class="card-deck">
+              <div class="card" style="">
+                <img
+                  class="card-img-top"
+                  src="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/CleanShot%202021-12-18%20at%2019.11.53%402x.png?v=1639825946229"
+                  alt="App"
+                  height="400"
+                  width=""
+                />
+                <div class="card-body bg-light d-flex flex-column">
+                  <h4 class="card-title">Emergency Aid</h4>
+                  <p class="card-text">
+                    Know the number of emergency services worldwide! This app
+                    was made as part of the SST Changemakers Programme by Savior
+                    Inc. As the Chief Technology Officer of Savior Inc, I coded
+                    out this app.
+                  </p>
+                  <a
+                    href="https://github.com/Sanjith7146/Emergency_Aid"
+                    class="mt-auto btn bg-secondary text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explore Code</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/CleanShot%202021-12-18%20at%2019.28.25%402x.png?v=1639829250174"
+                  alt="Card image cap"
+                  height="400"
+                  width=""
+                />
+                <div class="card-body bg-light d-flex flex-column">
+                  <h4 class="card-title">Quizster</h4>
+                  <p class="card-text">
+                    A simple quiz app to play when you're bored. This app was
+                    made as a personal project by me.
+                  </p>
+                  <a
+                    href="https://github.com/Sanjith7146/Quiz_App"
+                    class="mt-auto btn bg-secondary text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explore Code</a
+                  >
+                </div>
+              </div>
+
+              <div class="card" style="">
+                <img
+                  class="card-img-top"
+                  src="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/CleanShot%202021-12-18%20at%2021.56.11%402x.png?v=1639835801299"
+                  alt="Card image cap"
+                  height="400"
+                  width=""
+                />
+                <div class="card-body bg-light d-flex flex-column">
+                  <h4 class="card-title">Jokey</h4>
+                  <p class="card-text">
+                    Enjoy Dad Jokes? Here's an app for you to laugh on the go!
+                    This app was made as a personal project by me for leisure.
+                  </p>
+                  <a
+                    href="https://github.com/Sanjith7146/Jokes"
+                    class="mt-auto btn bg-secondary text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explore Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div
+        class="w3-container w3-card w3-white w3-margin-bottom w3-round w3-mobile"
+      >
+        <div
+          class="w3-content w3-margin-top"
+          style="max-width: 1400px; padding-bottom: 30px; padding-top: 10px"
+        >
+          <section id="Python" style="padding-left: 50px; padding-right: 50px">
+            <h2>Projects made using Python</h2>
+            <p>
+              Python is a diverse programming language that can be used as an
+              introduction into the programming world. It is also capable of
+              high-level programming such as Artificial Intelligence and Machine
+              Learning!
+            </p>
+            <div class="card-deck">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/CleanShot%202021-12-17%20at%2022.13.15%402x.png?v=1639750433248"
+                  alt="Image"
+                  width=""
+                  height="320"
+                />
+                <div class="card-body bg-light d-flex flex-column">
+                  <h4 class="card-title">Unbored</h4>
+                  <p class="card-text">
+                    A Python Project that uses turtle and console games to
+                    reverse your boredom. This programme was made as a personal
+                    project by me to reduce my boredom during the holidays!
+                  </p>
+                  <a
+                    href="https://github.com/Sanjith7146/Random-Project"
+                    class="mt-auto btn bg-secondary text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explore Code</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/CleanShot%202021-12-17%20at%2021.20.18%402x.png?v=1639747317963"
+                  alt="Image"
+                  width=""
+                  height="320"
+                />
+                <div class="card-body bg-light d-flex flex-column">
+                  <h4 class="card-title">Singapore/India Flag</h4>
+                  <p class="card-text">
+                    Singapore and India's Flag made using python turtle! This
+                    programme was created as a personal project by me for
+                    leisure.
+                  </p>
+                  <a
+                    href="https://github.com/Sanjith7146/SG-IND-FLAG"
+                    class="mt-auto btn bg-secondary text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explore Code</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/CleanShot%202021-12-17%20at%2022.21.26%402x.png?v=1639750909615"
+                  alt="Image"
+                  width=""
+                  height="320"
+                />
+                <div class="card-body bg-light d-flex flex-column">
+                  <h4 class="card-title">Shiritori word game</h4>
+                  <p class="card-text">
+                    An excellent vocabulary word game for you to play when
+                    you're bored! This programme was made as a personal project
+                    for me to improve my vocabulary in a fun and exciting way.
+                  </p>
+                  <a
+                    href="https://github.com/Sanjith7146/-Shiritori-word-game"
+                    class="mt-auto btn bg-secondary text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explore Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      
+      <div
+        class="w3-container w3-card w3-white w3-margin-bottom w3-round w3-mobile"
+      >
+        <div
+          class="w3-content w3-margin-top"
+          style="max-width: 1400px; padding-bottom: 30px; padding-top: 10px"
+        >
+          <section id="html" style="padding-left: 50px; padding-right: 50px">
+            <h2>Projects made using HTML, CSS and JavaScript</h2>
+            <p>
+              HTML or aslo known as HyperText Markup Language, is used for developing the skeleton of a website. CSS or Cascading StyleSheet
+              is used for desgining the frontend of a website. JS or JavaScript is used for programming the backend and functionalites of websites.
+              With all 3 combined, a good website can be done.
+            </p>
+            <div class="card-deck">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="https://cdn.glitch.global/d0166dfe-2028-47fa-91be-8fb9554685f6/CleanShot%202022-03-30%20at%2012.10.44%402x.png?v=1648613473412"
+                  alt="Image"
+                  width=""
+                  height="320"
+                />
+                <div class="card-body bg-light d-flex flex-column">
+                  <h4 class="card-title">Word Counter</h4>
+                  <p class="card-text">
+                    A website that allows you to check how many words and character you use with a good design!
+                  </p>
+                  <a
+                    href="https://striped-warp-tablecloth.glitch.me"
+                    class="mt-auto btn bg-primary text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  > Visit the Website</a>
+                                    <div style="padding-top:5px;padding-bottom:5px;">
+                  
+                  </div>
+
+                  <a
+                    href="https://github.com/Sanjith7146/WordCounter"
+                    class="mt-auto btn bg-secondary text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explore Code</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="https://cdn.glitch.global/d0166dfe-2028-47fa-91be-8fb9554685f6/CleanShot%202022-03-30%20at%2012.30.38%402x.png?v=1648614651684"
+                  alt="Image"
+                  width=""
+                  height="320"
+                />
+                <div class="card-body bg-light d-flex flex-column">
+                  <h4 class="card-title">Sticky Notes</h4>
+                  <p class="card-text">
+                    A website that allows you to add your personal sitcky notes and your todos for that day!
+                  </p>
+                  <a
+                    href="https://ritzy-wool-saver.glitch.me"
+                    class="mt-auto btn bg-primary text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Visit the Website</a
+                  >
+                                    <div style="padding-top:5px;padding-bottom:5px;">
+                  
+                  </div>
+                  <a
+                    href="https://github.com/Sanjith7146/StickyNotes"
+                    class="mt-auto btn bg-secondary text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explore Code</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="https://cdn.glitch.global/d0166dfe-2028-47fa-91be-8fb9554685f6/CleanShot%202022-03-30%20at%2012.34.45%402x.png?v=1648614931119"
+                  alt="Image"
+                  width=""
+                  height="320"
+                />
+                <div class="card-body bg-light d-flex flex-column">
+                  <h4 class="card-title">Tool Box</h4>
+                  <p class="card-text">
+                    A website that has a Password Checker, Password and a Google Drive Direct Download link generator
+                  </p>
+                  <a
+                    href="https://erratic-square-feels.glitch.me"
+                    class="mt-auto btn bg-primary text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Visit the Website</a
+                  >
+                  <div style="padding-top:5px;padding-bottom:5px;">
+                  
+                  </div>
+                  <a
+                    href="https://github.com/Sanjith7146/ToolBox"
+                    class="mt-auto btn bg-secondary text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explore Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      
+    </div>
+    <script src="index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+  <footer class="w3-white w3-padding-16">
+    <div class="wrapper" id="footerwrapper">
+      <a
+        href="https://www.instagram.com/mr_sun101/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div id="insta" class="button">
+          <div class="icon">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <span>Instagram</span>
+        </div>
+      </a>
+      <a
+        href="https://github.com/Sanjith7146"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div id="gh" class="button">
+          <div class="icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <span>Github</span>
+        </div>
+      </a>
+      <a
+        href="mailto:sanjithsethu@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="button" id="gmail">
+          <div class="icon">
+            <i class="far fa-envelope"></i>
+          </div>
+          <span>Email</span>
+        </div>
+      </a>
+      <a
+        href="https://api.whatsapp.com/send/?phone=+6584226317&text=Hello%21+I+saw+your+website+and+I+would+like+to+have+a+little+chat+with+you!&app_absent=0"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="button" id="whatsapp">
+          <div class="icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <span>Whatsapp</span>
+        </div>
+      </a>
+    </div>
+    <div style="height: 20px"></div>
+    <p class="attr" id="footerwrapper2">
+      <b
+        >©2022 by Sanjith. All Rights Reserved. Domain powered by:
+        <img
+          class="exabytesLogo"
+          src="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/Exabytes.png?v=1640073806021"
+          alt="Exabytes"
+          height="48"
+      /></b>
+    </p>
+  </footer>
+</html>
