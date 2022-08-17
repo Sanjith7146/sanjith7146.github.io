@@ -39,4 +39,3 @@ function theFunction() {
     y.classList.toggle("click");
   }
 }
-

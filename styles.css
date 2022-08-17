@@ -126,19 +126,15 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
-#whatsapp {
-  margin-left: 15px;!important
-	margin-top: 15px;!important
-}
-
-#gmail{
-	margin-top: 15px;!important
-}
 
 #insta,
 #gh {
   margin-right: 15px;!important
 	
+}
+
+#whatsapp {
+  margin-left: 15px;!important
 }
 
 #insta:hover .icon {
@@ -351,11 +347,8 @@ footer {
 }
 #whatsappabt {
   margin-left: 15px;!important
-	margin-top: 15px;!important
 }
-#gmailabt {
-	margin-top: 15px;!important
-}
+
 
 #instaabt:hover .icon {
   background: #e1306c;!important
@@ -444,5 +437,28 @@ h1,h2,h3,h4,h5,h6, p {
 
 .carousel-item-next, .carousel-item-prev, .carousel-item.active {
   display:block;
+}
+
+[style*="--aspect-ratio"] > :first-child {
+  width: 100%;
+}
+[style*="--aspect-ratio"] > img {  
+  height: auto;
+} 
+@supports (--custom:property) {
+  [style*="--aspect-ratio"] {
+    position: relative;
+  }
+  [style*="--aspect-ratio"]::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+  }  
+  [style*="--aspect-ratio"] > :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }  
 }
 
