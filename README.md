@@ -1,5 +1,5 @@
 # Personal_Website
-Source Code for my [personal website](https://hisanjith.com)
+Source Code for my [personal website](https://sanjith.net)
 
 # Website
 [sanjith.net](https://sanjith.net)
@@ -8,3 +8,8 @@ Source Code for my [personal website](https://hisanjith.com)
 
 The file .htaccess was used to remove the ".html" at the back of website URLs.
 
+
+
+
+
+The github repo is used as hosting
