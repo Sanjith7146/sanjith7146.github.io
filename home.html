@@ -1,264 +1,180 @@
-                        <p style="padding-top: 10                        <p style="padding-top: 1099<html lang="en">
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="google-site-verification"
-      content="Cf__WT19N1aIlN2kVkUan9kuQSniuHA7CBGdggHxKS0"
-    />
+    <meta name="google-site-verification" content="Cf__WT19N1aIlN2kVkUan9kuQSniuHA7CBGdggHxKS0" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Quicksand"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-   
-    
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
     <title>About Sanjith</title>
     <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/CleanShot_2021-12-09_at_21.47.52_2x-removebg-preview.png?v=1639627415359"
-    />
+    <link rel="icon" type="image/png" href="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/CleanShot_2021-12-09_at_21.47.52_2x-removebg-preview.png?v=1639627415359" />
     <script src="index.js"></script>
     <script language="JavaScript">
-      window.onload = function () {
-        document.addEventListener(
-          "contextmenu",
-          function (e) {
-            e.preventDefault();
-          },
-          false
-        );
-        document.addEventListener(
-          "keydown",
-          function (e) {
-            //document.onkeydown = function(e) {
-            // "I" key
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-              disabledEvent(e);
+        window.onload = function() {
+            document.addEventListener(
+                "contextmenu",
+                function(e) {
+                    e.preventDefault();
+                },
+                false
+            );
+            document.addEventListener(
+                "keydown",
+                function(e) {
+                    //document.onkeydown = function(e) {
+                    // "I" key
+                    if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                        disabledEvent(e);
+                    }
+                    // "J" key
+                    if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                        disabledEvent(e);
+                    }
+                    // "S" key + macOS
+                    if (
+                        e.keyCode == 83 &&
+                        (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)
+                    ) {
+                        disabledEvent(e);
+                    }
+                    // "U" key
+                    if (e.ctrlKey && e.keyCode == 85) {
+                        disabledEvent(e);
+                    }
+                    // "F12" key
+                    if (event.keyCode == 123) {
+                        disabledEvent(e);
+                    }
+                },
+                false
+            );
+
+            function disabledEvent(e) {
+                if (e.stopPropagation) {
+                    e.stopPropagation();
+                } else if (window.event) {
+                    window.event.cancelBubble = true;
+                }
+                e.preventDefault();
+                return false;
             }
-            // "J" key
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-              disabledEvent(e);
-            }
-            // "S" key + macOS
-            if (
-              e.keyCode == 83 &&
-              (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)
-            ) {
-              disabledEvent(e);
-            }
-            // "U" key
-            if (e.ctrlKey && e.keyCode == 85) {
-              disabledEvent(e);
-            }
-            // "F12" key
-            if (event.keyCode == 123) {
-              disabledEvent(e);
-            }
-          },
-          false
-        );
-        function disabledEvent(e) {
-          if (e.stopPropagation) {
-            e.stopPropagation();
-          } else if (window.event) {
-            window.event.cancelBubble = true;
-          }
-          e.preventDefault();
-          return false;
-        }
-      };
-      //edit: removed ";" from last "}" because of javascript error
+        };
+        //edit: removed ";" from last "}" because of javascript error
     </script>
     <noscript>You need to enable JavaScript to view the full site.</noscript>
-  </head>
-  <body class="example" style="background-color: black; margin: auto">
-    <nav
-      class="w3-bar w3-black w3-card w3-top topnav"
-      id="myTopnav"
-      style="
+</head>
+
+<body class="example" style="background-color: black; margin: auto">
+    <nav class="w3-bar w3-black w3-card w3-top topnav" id="myTopnav" style="
         position: fixed;
         top: 0;
         display: flex;
         align-items: center;
         overflow: hidden;
-      "
-    >
-      <a href="/">
-        <img
-          src="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/CleanShot_2021-12-09_at_21.47.52_2x-removebg-preview.png?v=1639627415359"
-          class="w3-bar-item w3-button w3-hover-black w3-hover-text-grey first"
-        />
-      </a>
-      <a
-        href="/"
-        class="w3-mobile active w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
-        >About</a
-      >
-      
-      <a
-        href="experience"
-        class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
-        >Experience</a
-      >
-      <a
-        href="biotech"
-        class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
-        >Biotechnology</a
-      >
-      <a
-        href="programming"
-        class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
-        >Programming</a
-      >
-      <a
-        href="lateiva"
-        class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
-        >Lateiva</a
-      >
-      <a
-        href="tamiliva"
-        class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16"
-        >Tamiliva</a
-      >
+      ">
+        <a href="/">
+            <img src="https://cdn.glitch.me/54a9f616-088c-4c9c-b58e-d6249b0c3b0d/CleanShot_2021-12-09_at_21.47.52_2x-removebg-preview.png?v=1639627415359" class="w3-bar-item w3-button w3-hover-black w3-hover-text-grey first" />
+        </a>
+        <a href="/" class="w3-mobile active w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16">About</a>
 
-      <a href="javascript:void(0);" class="icon" style="margin-right: 16px">
-        <div class="container" onclick="myFunction(this);">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
-        </div>
-      </a>
+        <a href="experience" class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16">Experience</a>
+        <a href="biotech" class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16">Biotechnology</a>
+        <a href="programming" class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16">Programming</a>
+        <a href="lateiva" class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16">Lateiva</a>
+        <a href="tamiliva" class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16">Tamiliva</a>
+
+        <a href="javascript:void(0);" class="icon" style="margin-right: 16px">
+            <div class="container" onclick="myFunction(this);">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </a>
     </nav>
     <br />
     <div class="content">
-      <div
-        class="w3-content w3-margin-top"
-        style="max-width: 1400px; padding-top: 30px"
-      >
-        <div style="padding-top: 15px">
-          <div
-            class="w3-container w3-card w3-black w3-margin-bottom w3-round w3-mobile"
-          >
-            <br />
-            <div class="w3-content w3-margin-top" style="max-width: 1400px">
-              <section id="aboutme">
-                <div class="container px-5" id="abtdiv">
-                  <div class="row">
-                    <div class="col-md-6" style="padding-bottom: 30px">
-                      <img
-                        class="img-fluid rounded-lg"
-                        src="https://cdn.glitch.global/d0166dfe-2028-47fa-91be-8fb9554685f6/Sanjith%20Image%202.jpg?v=1645799243176"
-                        alt="Photo"
-                        height="50"
-                        id="abtimage"
-                      />
+        <div class="w3-content w3-margin-top" style="max-width: 1400px; padding-top: 30px">
+            <div style="padding-top: 15px">
+                <div class="w3-container w3-card w3-black w3-margin-bottom w3-round w3-mobile">
+                    <br />
+                    <div class="w3-content w3-margin-top" style="max-width: 1400px">
+                        <section id="aboutme">
+                            <div class="container px-5" id="abtdiv">
+                                <div class="row">
+                                    <div class="col-md-6" style="padding-bottom: 30px">
+                                        <img class="img-fluid rounded-lg" src="https://cdn.glitch.global/d0166dfe-2028-47fa-91be-8fb9554685f6/Sanjith%20Image%202.jpg?v=1645799243176" alt="Photo" height="50" id="abtimage" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h1>
+                                            <b>Hey!</b>
+                                        </h1>
+                                        <p>
+                                            I am Sanjith - A student, biotech enthusiast, app developer, web developer and a designer based in Singapore.
+                                        </p>
+                                        <p>
+                                            I am passionate about harnessing technology to help
+                                            society primarily through Science - Creating a world
+                                            where humans can know their health through their Phones
+                                            and getting examined by their smart wearables through
+                                            combining Artificial Intelligence with Biotechnology.
+
+
+                                        </p>
+                                        <div class="wrapper2" style="padding-top: 20px; padding-bottom: 50px">
+                                            <a href="https://www.instagram.com/sanjith7146/" target="_blank" rel="noopener noreferrer">
+                                                <div id="insta" class="button">
+                                                    <div class="icon">
+                                                        <i class="fab fa-instagram"></i>
+                                                    </div>
+                                                    <span>Instagram</span>
+                                                </div>
+                                            </a>
+                                            <a href="https://github.com/Sanjith7146" target="_blank" rel="noopener noreferrer">
+                                                <div id="ghabt" class="button">
+                                                    <div class="icon">
+                                                        <i class="fab fa-github"></i>
+                                                    </div>
+                                                    <span>Github</span>
+                                                </div>
+                                            </a>
+                                            <a href="mailto:sanjithsethu@gmail.com" target="_blank" rel="noopener noreferrer">
+                                                <div class="button" id="gmailabt">
+                                                    <div class="icon">
+                                                        <i class="far fa-envelope"></i>
+                                                    </div>
+                                                    <span>Email</span>
+                                                </div>
+                                            </a>
+                                            <a href="https://api.whatsapp.com/send/?phone=+6584226317&text=Hello%21+I+saw+your+website+and+I+would+like+to+have+a+little+chat+with+you!&app_absent=0" target="_blank" rel="noopener noreferrer">
+                                                <div class="button" id="whatsappabt">
+                                                    <div class="icon">
+                                                        <i class="fab fa-whatsapp"></i>
+                                                    </div>
+                                                    <span>Whatsapp</span>
+                                                </div>
+                                            </a>
+                                            <div>
+                                                <p style="padding-top: 90px;">
+                                                    ©2022 by Sanjith. All Rights Reserved.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
-                    <div class="col-md-6">
-                      <h1>
-                        <b>Hey!</b>
-                      </h1>
-                      <p>
-                        I am Sanjith - A student, biotech enthusiast, app developer, web developer and a designer based in Singapore.
-                      </p>
-                      <p>
-                        I am passionate about harnessing technology to help
-                        society primarily through Science - Creating a world
-                        where humans can know their health through their Phones
-                        and getting examined by their smart wearables through
-                        combining Artificial Intelligence with Biotechnology.
-                        
-                        
-                      </p>
-                
-                      <div
-                        class="wrapper2"
-                        style="padding-top: 20px; padding-bottom: 50px"
-                      >
-                        <a
-        href="https://www.instagram.com/sanjith7146/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div id="insta" class="button">
-          <div class="icon">
-            <i class="fab fa-instagram"></i>
-          </div>
-          <span>Instagram</span>
-        </div>
-      </a>
-                        <a
-                          href="https://github.com/Sanjith7146"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <div id="ghabt" class="button">
-                            <div class="icon">
-                              <i class="fab fa-github"></i>
-                            </div>
-                            <span>Github</span>
-                          </div>
-                        </a>
-                        <a
-                          href="mailto:sanjithsethu@gmail.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <div class="button" id="gmailabt">
-                            <div class="icon">
-                              <i class="far fa-envelope"></i>
-                            </div>
-                            <span>Email</span>
-                          </div>
-                        </a>
-                        <a
-                          href="https://api.whatsapp.com/send/?phone=+6584226317&text=Hello%21+I+saw+your+website+and+I+would+like+to+have+a+little+chat+with+you!&app_absent=0"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <div class="button" id="whatsappabt">
-                            <div class="icon">
-                              <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <span>Whatsapp</span>
-               <div>
-                        <p style="padding-top: 100px;">
-                          ©2022 by Sanjith. All Rights Reserved.
-                        </p>
-                      </div>yle="padding-top: 100px">
-                          ©2022 by Sanjith. All Rights Reserved.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </section>
             </div>
-          </div>
         </div>
-      </div>
     </div>
+
     <script src="index.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-    gin="anonymous"
-    ></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" gin="anonymous"></script>
+</body>
+
 </html>
