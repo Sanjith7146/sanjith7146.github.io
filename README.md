@@ -2,7 +2,7 @@
 Source Code for my [personal website](https://hisanjith.com)
 
 # Website
-[hisanjith.com](https://hisanjith.com)
+[sanjith.net](https://sanjith.net)
 
 ## .htaccess
 
