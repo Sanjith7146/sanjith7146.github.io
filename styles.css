@@ -127,18 +127,19 @@ footer {
   margin-right: auto;
 }
 
-#insta,
-#gh {
+#gmail, #gh, #in, #insta {
   margin-right: 15px;!important
-	
 }
 
-#whatsapp {
-  margin-left: 15px;!important
+#gmail, #gh, #in, #insta, #whatsapp {
+  margin-top: 20px;!important
 }
 
 #insta:hover .icon {
   background: #e1306c;!important
+}
+#in:hover .icon {
+  background: #0072b1;!important
 }
 #gh:hover .icon {
   background: #333333;!important
@@ -153,6 +154,9 @@ footer {
 #insta .icon {
   color: #e1306c;!important
 }
+#in .icon {
+  color: #0072b1;!important
+}
 #gh .icon {
   color: #333333;!important
 }
@@ -166,6 +170,9 @@ footer {
 #insta span {
   color: #e1306c;!important
 }
+#in span {
+  color: #0072b1;!important
+}
 #gh span {
   color: #333333;!important
 }
@@ -175,6 +182,67 @@ footer {
 #whatsapp span {
   color: #25d366;!important
 }
+
+
+
+#gmailabt, #ghabt, #inabt, #instaabt {
+  margin-right: 15px;!important
+}
+
+#gmailabt, #ghabt, #inabt, #instaabt,#whatsappabt {
+  margin-top: 20px;!important
+}
+
+
+#instaabt:hover .icon {
+  background: #e1306c;!important
+}
+#inabt:hover .icon {
+  background: #0072b1;!important
+}
+#ghabt:hover .icon {
+  background: #333333;!important
+}
+#gmailabt:hover .icon {
+  background: black;!important
+}
+#whatsappabt:hover .icon {
+  background: #25d366;!important
+}
+
+#instaabt .icon {
+  color: #e1306c;!important
+}
+#inabt .icon {
+  color: #0072b1;!important
+}
+#ghabt .icon {
+  color: #333333;!important
+}
+#gmailabt .icon {
+  color: black;!important
+}
+#whatsappabt .icon {
+  color: #25d366;!important
+}
+
+#instaabt span {
+  color: #e1306c;!important
+}
+#inabt span {
+  color: #0072b1;!important
+}
+#ghabt span {
+  color: #333333;!important
+}
+#gmailabt span {
+  color: black;!important
+}
+#whatsappabt span {
+  color: #25d366;!important
+}
+
+
 
 #footerwrapper2 {
   margin-left: auto;
@@ -341,53 +409,7 @@ footer {
   line-height: 36px;
 }
 
-#instaabt,
-#ghabt {
-  margin-right: 15px;!important
-}
-#whatsappabt {
-  margin-left: 15px;!important
-}
 
-
-#instaabt:hover .icon {
-  background: #e1306c;!important
-}
-#ghabt:hover .icon {
-  background: #333333;!important
-}
-#gmailabt:hover .icon {
-  background: black;!important
-}
-#whatsappabt:hover .icon {
-  background: #25d366;!important
-}
-
-#instaabt .icon {
-  color: #e1306c;!important
-}
-#ghabt .icon {
-  color: #333333;!important
-}
-#gmailabt .icon {
-  color: black;!important
-}
-#whatsappabt .icon {
-  color: #25d366;!important
-}
-
-#instaabt span {
-  color: #e1306c;!important
-}
-#ghabt span {
-  color: #333333;!important
-}
-#gmailabt span {
-  color: black;!important
-}
-#whatsappabt span {
-  color: #25d366;!important
-}
 .carousel-caption {
     position: relative;
     left: 0;
