@@ -10,6 +10,4 @@ The file .htaccess was used to remove the ".html" at the back of website URLs.
 
 
 
-
-
-The github repo is used as hosting
+This github repo is used as hosting
