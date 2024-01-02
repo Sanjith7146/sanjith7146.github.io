@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="google-site-verification" content="Cf__WT19N1aIlN2kVkUan9kuQSniuHA7CBGdggHxKS0" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
+        <link href="https://vjs.zencdn.net/7.18.1/video-js.css" rel="stylesheet" />
+        <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+        <title>URL Shortener</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" type="image/png" href="Assets/Logo.png" />
+        <script src="index.js"></script>
+        <script language="JavaScript">
+            window.onload = function() {
+                document.addEventListener(
+                    "contextmenu",
+                    function(e) {
+                        e.preventDefault();
+                    },
+                    false
+                );
+                document.addEventListener(
+                    "keydown",
+                    function(e) {
+                        //document.onkeydown = function(e) {
+                        // "I" key
+                        if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                            disabledEvent(e);
+                        }
+                        // "J" key
+                        if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                            disabledEvent(e);
+                        }
+                        // "S" key + macOS
+                        if (
+                            e.keyCode == 83 &&
+                            (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)
+                        ) {
+                            disabledEvent(e);
+                        }
+                        // "U" key
+                        if (e.ctrlKey && e.keyCode == 85) {
+                            disabledEvent(e);
+                        }
+                        // "F12" key
+                        if (event.keyCode == 123) {
+                            disabledEvent(e);
+                        }
+                    },
+                    false
+                );
+
+                function disabledEvent(e) {
+                    if (e.stopPropagation) {
+                        e.stopPropagation();
+                    } else if (window.event) {
+                        window.event.cancelBubble = true;
+                    }
+                    e.preventDefault();
+                    return false;
+                }
+            };
+            //edit: removed ";" from last "}" because of javascript error
+        </script>
+        <noscript>You need to enable JavaScript to view the full site.</noscript>
+    </head>
+
+    <body class="example">
+        <nav class="w3-bar w3-black w3-card w3-top topnav" id="myTopnav" style="
+                                                                                position: fixed;
+                                                                                top: 0;
+                                                                                display: flex;
+                                                                                align-items: center;
+                                                                                overflow: hidden;
+                                                                                ">
+            <a href="/">
+                <img src="Assets/Logo.png" class="w3-bar-item w3-button w3-hover-black w3-hover-text-grey first" />
+            </a>
+            <a href="/" class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16">About</a>
+
+            <a href="experience" class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16">Experience</a>
+            <a href="biotech" class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16">Biotechnology</a>
+            <a href="programming" class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16">Programming</a>
+            <a href="lateiva" class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16">Lateiva</a>
+            <a href="tamiliva" class="w3-mobile w3-left w3-bar-item w3-button w3-hover-black w3-hover-text-grey w3-padding-16">Tamiliva</a>
+
+            <a href="javascript:void(0);" class="icon" style="margin-right: 16px">
+                <div class="container" onclick="myFunction(this);">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </a>
+        </nav>
+        <br />
+
+        <div class="w3-content w3-margin-top" style="max-width: 1400px; padding-top: 30px">
+            <div style="padding-top: 15px">
+                <div class="w3-container w3-card w3-white w3-margin-bottom w3-round w3-mobile">
+                    <br />
+
+                    <section class="wrapper container">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center pb-3">
+                                            Paste the URL to be shortened
+                                        </h5>
+                                        <div class="form-group">
+                                            <input
+                                                   type="url"
+                                                   value
+                                                   class="form-control text-center my-3"
+                                                   id="linkinput"
+                                                   placeholder="Paste your long link here"
+                                                   />
+                                            <input
+                                                   type="url"
+                                                   value
+                                                   class="form-control text-center my-3"
+                                                   id="pathinput"
+                                                   placeholder="Enter a custom backhalf"
+                                                   />
+                                            <div class="d-grid">
+                                                <button type="submit" class="btn btn-success" id="myinput">
+                                                    Shorten
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="wrapper container">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center pb-3">
+                                            <label for="copy">Your shortened URL</label>
+                                        </h5>
+                                        <div class="d-flex">
+                                            <p
+                                               class="form-control text-center my-3"
+                                               id="message"
+
+                                               >Shorten a URL first!</p>
+
+                                            <button
+                                                    onclick="Copy()"
+                                                    class="btn btn-outline-success"
+                                                    id="copy"
+                                                    >
+                                                copy
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById("myinput").onclick = function () {
+                var link = document.getElementById("linkinput").value;
+                var pathlink = document.getElementById("pathinput").value;
+                var data = {
+                    domain: "go.sanjith.net",
+                    originalURL: link,
+                    allowDuplicates: false,
+                    path: pathlink,
+                };
+                fetch("https://api.short.cm/links/public", {
+                    method: "post",
+                    headers: {
+                        accept: "application/json",
+                        "Content-Type": "application/json",
+                        authorization: "pk_ZkXBkCWPMKzvaDHA",
+                    },
+                    body: JSON.stringify(data),
+                })
+                    .then(function (response) {
+                    return response.json();
+                })
+                    .then(function (data) {
+                    document.getElementById("message").innerHTML = data.shortURL;
+                });
+                document.getElementById("linkinput").value = "";
+                document.getElementById("pathinput").value = "";
+            };
+
+            function Copy() {
+                const textarea = document.createElement("textarea");
+                const url = document.getElementById("message").innerText;
+                if (!url) {
+                    return;
+                }
+                textarea.value = url;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                textarea.remove();
+                alert("ShortURL copied to clipboard");
+            }
+        </script>
+
+        <script src="index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+        <script src="https://vjs.zencdn.net/7.18.1/video.min.js"></script>
+    </body>
+
+    <footer class="w3-white w3-padding-16">
+        <div class="wrapper" id="footerwrapper">
+            <a href="mailto:hello@sanjith.net" target="_blank" rel="noopener noreferrer">
+                <div class="button" id="gmail">
+                    <div class="icon">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <span>Email</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/Sanjith7146" target="_blank" rel="noopener noreferrer">
+                <div id="gh" class="button">
+                    <div class="icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <span>Github</span>
+                </div>
+            </a>
+
+
+            <a href="https://www.linkedin.com/in/sanjithsethu" target="_blank" rel="noopener noreferrer">
+                <div id="in" class="button">
+                    <div class="icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <span>LinkedIn</span>
+                </div>
+            </a>
+
+
+            <a href="https://www.instagram.com/sanjith7146/" target="_blank" rel="noopener noreferrer">
+                <div id="insta" class="button">
+                    <div class="icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <span>Instagram</span>
+                </div>
+            </a>
+
+            <a href="https://api.whatsapp.com/send/?phone=+6584226317&text=Hello%21+I+saw+your+website+and+I+would+like+to+have+a+little+chat+with+you!&app_absent=0" target="_blank" rel="noopener noreferrer">
+                <div class="button" id="whatsapp">
+                    <div class="icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <span>Whatsapp</span>
+                </div>
+            </a>
+        </div>
+
+        <p class="attr" id="footerwrapper2">
+            <b> &copy; 2024 by Sanjith. All Rights Reserved.</b>
+        </p>
+    </footer>
+
+</html>
