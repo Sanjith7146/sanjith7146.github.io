@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+#pdf-container {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#pdf-viewer {
+    display: none;
+}
+
+#pdf-controls {
+    background-color: #f8f8f8;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+button, input {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+input[type="number"] {
+    width: 50px;
+    background-color: white;
+    color: black;
+}
+
+#page-num, #page-count {
+    margin: 0 5px;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#pdf-loader {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    display: none;
+}
+
+#pdf-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pdf-buttons button {
+    margin: 0 10px;
+}
