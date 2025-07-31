@@ -1,14 +1,10 @@
-## hide .pdf extension
-# To externally redirect /dir/file.pdf to /dir/file
-RewriteCond %{THE_REQUEST} \s/+(.+?)\.pdf[\s?] [NC]
-RewriteRule ^ /%1 [R=302,L,NE]
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
 
-# To internally forward /dir/file to /dir/file.pdf
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{DOCUMENT_ROOT}/$1\.pdf -f [NC]
-RewriteRule ^(.+?)/?$ /$1.pdf [L]
-
+Options -MultiViews
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.pdf !-f
 RewriteRule ^([^\.]+)$ $1.pdf [NC,L]
 
